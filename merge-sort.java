@@ -3,12 +3,12 @@ import java.util.*;
 class Sort
 {
     public static void main(String[] args)
-    {        
+    {
         int[] a = {256,368,291,64,82,1,23,10,17,3,25,29,15,24};
         System.out.println("unsorted: " + Arrays.toString(a));
 
         int[] sorted = merge(a,(int)Math.ceil(a.length/2));
-        
+
         System.out.println("sorted: " + Arrays.toString(sorted));
     }
     public static int[] merge(int[] arr, int middle)
@@ -58,12 +58,12 @@ class Sort
         {
             if (arr0Pos < arr0.length && arr1Pos < arr1.length)
             {
-                if (arr0[arr0Pos] <= arr1[arr1Pos]) 
+                if (arr0[arr0Pos] <= arr1[arr1Pos])
                 {
                     a[i] = arr0[arr0Pos];
                     arr0Pos ++;
                 }
-                else 
+                else
                 {
                     a[i] = arr1[arr1Pos];
                     arr1Pos ++;
@@ -71,7 +71,7 @@ class Sort
             }
             else
             {
-                if (arr0Pos < arr0.length) 
+                if (arr0Pos < arr0.length)
                 {
                     a[i] = arr0[arr0Pos];
                     arr0Pos ++;
